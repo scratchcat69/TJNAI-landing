@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy — TJNAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --void: #020209;
+      --surface: #0a0a14;
+      --border: rgba(255,255,255,0.07);
+      --border2: rgba(255,255,255,0.13);
+      --text: #f0f0f8;
+      --text2: #a0a0b8;
+      --text3: #5a5a72;
+      --cyan: #00d4ff;
+      --cyan-glow: rgba(0,212,255,0.18);
+      --purple: #8b5cf6;
+      --pink: #ec4899;
+      --font-b: 'Inter', system-ui, sans-serif;
+      --font-d: 'Space Grotesk', system-ui, sans-serif;
+      --r-xl: 100px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--void);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 52px;
+      background: rgba(2,2,9,0.85);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 50%; }
+    .nav-logo span {
+      font-family: var(--font-d); font-weight: 700;
+      font-size: 17px; letter-spacing: 0.06em;
+    }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 22px;
+      border: 1px solid var(--border2);
+      border-radius: var(--r-xl);
+      color: var(--text2); font-size: 13px; font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .nav-back:hover { color: var(--text); border-color: rgba(255,255,255,0.28); background: rgba(255,255,255,0.04); }
+
+    /* PAGE */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 140px 32px 80px;
+    }
+
+    .page-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--cyan); margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: var(--font-d);
+      font-size: clamp(30px, 3vw, 46px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.022em;
+      margin-bottom: 10px;
+    }
+
+    .grad {
+      background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 50%, var(--pink) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: grad-anim 7s ease infinite;
+    }
+    @keyframes grad-anim {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .updated {
+      font-size: 13px; color: var(--text3); margin-bottom: 52px;
+    }
+
+    /* CARD */
+    .card {
+      background: rgba(255,255,255,0.018);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 40px 44px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 0% 0%, rgba(0,212,255,0.06), transparent 65%);
+      pointer-events: none;
+    }
+
+    h2 {
+      font-family: var(--font-d);
+      font-size: 17px; font-weight: 600;
+      color: var(--cyan);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    p { color: var(--text2); font-size: 15px; margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      color: var(--text2); font-size: 15px;
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+    ul li { margin-bottom: 8px; }
+
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .highlight {
+      display: inline-block;
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-size: 13px;
+      color: var(--cyan);
+      font-family: monospace;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 52px;
+      border-top: 1px solid var(--border);
+      background: rgba(2,2,9,0.95);
+    }
+    .ft {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .ft-logo { display: flex; align-items: center; gap: 8px; color: var(--text2); text-decoration: none; }
+    .ft-logo img { width: 26px; height: 26px; border-radius: 50%; }
+    .ft-logo span { font-family: var(--font-d); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; }
+    .ft-copy { font-size: 12px; color: var(--text3); }
+    .ft-links { display: flex; gap: 22px; }
+    .ft-links a { font-size: 12px; color: var(--text3); text-decoration: none; transition: color 0.2s; }
+    .ft-links a:hover { color: var(--text2); }
+
+    @media (max-width: 640px) {
+      .nav { padding: 14px 24px; }
+      .page { padding: 110px 20px 60px; }
+      .card { padding: 28px 24px; }
+      footer { padding: 24px; }
+      .ft { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span>TJNAI</span>
+    </a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="page">
+
+    <p class="page-label">Legal</p>
+    <h1>Privacy <span class="grad">Policy</span></h1>
+    <p class="updated">Effective date: April 19, 2026 &nbsp;·&nbsp; Last updated: April 19, 2026</p>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>TJNAI AI Creative Studio ("TJNAI," "we," "us," or "our") operates the website at <a href="https://tjnai.ai">tjnai.ai</a>. We are committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+      <p>By using our website, you agree to the collection and use of information in accordance with this policy.</p>
+    </div>
+
+    <div class="card">
+      <h2>Information We Collect</h2>
+      <p>We collect minimal information to operate and improve our website:</p>
+      <ul>
+        <li><strong>Usage data</strong> — When you visit tjnai.ai, your browser may automatically send us information such as your IP address, browser type, referring URL, pages visited, and the date and time of your visit. This is standard web server logging.</li>
+        <li><strong>Contact information</strong> — If you reach out to us via email at <a href="mailto:info@tjnai.ai">info@tjnai.ai</a>, we collect the information you choose to provide (e.g., your name and email address) in order to respond to your inquiry.</li>
+        <li><strong>No account data</strong> — We do not require you to create an account, and we do not collect passwords or payment information through this website.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Third-Party Services</h2>
+      <p>Our website uses the following third-party services that may process data on your behalf:</p>
+      <ul>
+        <li><strong>ElevenLabs</strong> — We use ElevenLabs' text-to-speech API to power Tianna's voice on the site. When you interact with the voice feature, a request is sent to ElevenLabs' servers. Please review <a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener">ElevenLabs' Privacy Policy</a> for details on how they handle data.</li>
+        <li><strong>Google Fonts</strong> — We use Google Fonts to load web typography. Google may collect usage data when fonts are served. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for details.</li>
+        <li><strong>GitHub Pages</strong> — This website is hosted on GitHub Pages. GitHub may collect technical log data as part of hosting. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a> for details.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Cookies</h2>
+      <p>Our website does not use tracking cookies or advertising cookies. We do not use cookies to identify you personally across sessions.</p>
+      <p>Some third-party services integrated into our website (such as Google Fonts) may set cookies in accordance with their own privacy policies.</p>
+    </div>
+
+    <div class="card">
+      <h2>How We Use Your Information</h2>
+      <p>Any information we collect is used solely to:</p>
+      <ul>
+        <li>Operate and improve the tjnai.ai website</li>
+        <li>Respond to inquiries sent directly to us via email</li>
+        <li>Diagnose technical issues and monitor site performance</li>
+      </ul>
+      <p>We do not sell, trade, or rent your personal information to third parties. We do not use your information for advertising or marketing purposes without your explicit consent.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Retention</h2>
+      <p>Contact information shared via email is retained only as long as necessary to respond to your inquiry. Server logs are retained for a limited time for security and operational purposes and are then deleted.</p>
+    </div>
+
+    <div class="card">
+      <h2>Your Rights</h2>
+      <p>Depending on your location, you may have rights regarding your personal data, including the right to access, correct, or delete information we hold about you. To exercise any of these rights, please contact us at:</p>
+      <p><a href="mailto:info@tjnai.ai" class="highlight">info@tjnai.ai</a></p>
+      <p>We will respond to all requests within a reasonable timeframe and in accordance with applicable law.</p>
+    </div>
+
+    <div class="card">
+      <h2>Children's Privacy</h2>
+      <p>Our website is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately at <a href="mailto:info@tjnai.ai">info@tjnai.ai</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this page periodically to stay informed about how we protect your information.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or how we handle your data, please reach out:</p>
+      <p>
+        <strong>TJNAI AI Creative Studio</strong><br>
+        Email: <a href="mailto:info@tjnai.ai">info@tjnai.ai</a><br>
+        Website: <a href="https://tjnai.ai">tjnai.ai</a>
+      </p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <a href="index.html" class="ft-logo">
+        <span>TJNAI</span>
+      </a>
+      <p class="ft-copy">&copy; 2026 TJNAI. All rights reserved.</p>
+      <div class="ft-links">
+        <a href="mailto:info@tjnai.ai">info@tjnai.ai</a>
+        <a href="tianna-intro.html">Tianna Gallery</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
