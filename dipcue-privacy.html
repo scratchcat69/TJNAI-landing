@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DipCue Privacy Policy — TJNAI LLC</title>
+  <title>DipCue Privacy Policy — TJNAI.ai LLC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -115,9 +115,11 @@
     p { color: var(--text2); font-size: 15px; margin-bottom: 14px; }
     p:last-child { margin-bottom: 0; }
 
-    .no-collect { list-style: none; padding-left: 0; color: var(--text2); font-size: 15px; margin-bottom: 14px; }
-    .no-collect li { margin-bottom: 8px; }
-    .no-collect li::before { content: '✕  '; color: #ec4899; font-weight: 700; font-size: 12px; }
+    ul, ol {
+      color: var(--text2); font-size: 15px;
+      padding-left: 20px; margin-bottom: 14px;
+    }
+    ul li, ol li { margin-bottom: 6px; }
 
     a { color: var(--teal); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -127,6 +129,36 @@
       background: rgba(0,201,167,0.08); border: 1px solid rgba(0,201,167,0.2);
       border-radius: 6px; padding: 2px 10px; font-size: 13px; color: var(--teal); font-family: monospace;
     }
+
+    /* TABLES */
+    .tbl-wrap { overflow-x: auto; margin-bottom: 14px; }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 14px; color: var(--text2);
+    }
+    thead tr { border-bottom: 1px solid rgba(0,201,167,0.3); }
+    thead th {
+      text-align: left; padding: 10px 14px;
+      font-family: var(--font-d); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal);
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody td { padding: 11px 14px; vertical-align: top; line-height: 1.5; }
+    tbody td:first-child { color: var(--text); font-weight: 500; }
+
+    /* RIGHTS SUBSECTIONS */
+    .rights-group { margin-bottom: 20px; }
+    .rights-group:last-child { margin-bottom: 0; }
+    .rights-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 10px; display: block;
+    }
+
+    /* SECURITY LIST */
+    .security-list { list-style: none; padding-left: 0; color: var(--text2); font-size: 15px; margin-bottom: 14px; }
+    .security-list li { margin-bottom: 8px; padding-left: 26px; position: relative; }
+    .security-list li::before { content: '🔒'; position: absolute; left: 0; font-size: 13px; top: 2px; }
 
     /* FOOTER */
     footer { padding: 30px 52px; border-top: 1px solid var(--border); background: rgba(2,2,9,0.95); }
@@ -153,7 +185,7 @@
   <nav class="nav">
     <div class="nav-brand">
       <span class="app-name">DipCue</span>
-      <span class="app-sub">by TJNAI LLC</span>
+      <span class="app-sub">by TJNAI.ai LLC</span>
     </div>
     <a href="index.html" class="nav-back">← Back to TJNAI</a>
   </nav>
@@ -164,81 +196,184 @@
 
     <p class="page-label">Legal</p>
     <h1>DipCue <span class="grad">Privacy Policy</span></h1>
-    <p class="updated">Last updated: April 2026</p>
+    <p class="updated">Effective date: May 6, 2026 &nbsp;·&nbsp; Last updated: May 6, 2026</p>
 
+    <!-- 1. WHO WE ARE -->
     <div class="card">
-      <h2>👋 Overview</h2>
-      <p>DipCue ("we", "us") is built by TJNAI LLC. This policy explains what data we collect, why we collect it, and how we protect it.</p>
+      <h2>👋 Who We Are</h2>
+      <p>DipCue is operated by <strong style="color:var(--text)">TJNAI.ai LLC</strong>, a North Carolina limited liability company. TJNAI.ai LLC is the data controller for all personal data collected through DipCue.</p>
+      <p>
+        Email: <a href="mailto:support@tjnai.ai">support@tjnai.ai</a><br>
+        Website: <a href="https://tjnai.ai" target="_blank" rel="noopener">tjnai.ai</a>
+      </p>
     </div>
 
+    <!-- 2. WHAT WE COLLECT -->
     <div class="card">
       <h2>📋 What We Collect</h2>
-      <p>DipCue collects the following information:</p>
-      <p><strong style="color:var(--text)">Email address</strong> — for account creation and authentication.</p>
-      <p><strong style="color:var(--text)">Pool configuration</strong> — name, volume, and type you enter in the app.</p>
-      <p><strong style="color:var(--text)">Pool chemistry readings</strong> — scan results stored in your history.</p>
+      <p>We collect only what is necessary to provide the app:</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Email address</td><td>Account creation and authentication</td></tr>
+            <tr><td>Pool configuration (name, volume, type, strip preference)</td><td>Generating accurate chemical recommendations</td></tr>
+            <tr><td>Pool chemistry readings (chlorine, pH, alkalinity, CYA, hardness)</td><td>Storing your test history</td></tr>
+            <tr><td>Device push token</td><td>Weekly pool reminders (optional, requires your permission)</td></tr>
+            <tr><td>Anonymized purchase and device identifiers</td><td>Verifying your in-app purchase entitlement</td></tr>
+            <tr><td>Security audit logs</td><td>Detecting and preventing abuse</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>We do not collect your name, location, or any information unrelated to pool management.</p>
+      <p><strong style="color:var(--text)">Camera &amp; photos:</strong> The app requests camera access to photograph test strips. Images are transmitted to our AI analysis service and permanently deleted immediately after analysis completes. No strip photos are stored anywhere.</p>
     </div>
 
+    <!-- 3. GDPR -->
     <div class="card">
-      <h2>🚫 What We Do Not Collect</h2>
-      <ul class="no-collect">
-        <li>Your name</li>
-        <li>Location data</li>
-        <li>Any other personal information beyond what is listed above</li>
+      <h2>⚖️ Legal Basis for Processing (GDPR)</h2>
+      <p>For users in the European Economic Area (EEA) and United Kingdom, we process your data under the following legal bases:</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Legal Basis</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account and pool data</td><td>Contract — necessary to provide the service you signed up for</td></tr>
+            <tr><td>Push notification token</td><td>Consent — only collected when you enable reminders; you can withdraw at any time in Settings</td></tr>
+            <tr><td>Purchase identifiers</td><td>Legitimate interest — necessary to verify your purchase entitlement</td></tr>
+            <tr><td>Security audit logs</td><td>Legitimate interest — protecting the integrity and security of our service</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. HOW WE USE IT -->
+    <div class="card">
+      <h2>🎯 How We Use Your Data</h2>
+      <p>We use your data exclusively to:</p>
+      <ul>
+        <li>Provide pool chemistry analysis and recommendations</li>
+        <li>Store your reading history</li>
+        <li>Send weekly pool testing reminders (only if you opt in)</li>
+        <li>Verify your in-app purchase</li>
+        <li>Detect and prevent abuse or unauthorized access</li>
+      </ul>
+      <p>We do not use your data for advertising, profiling, or any purpose unrelated to pool management. We do not sell your data to any third party.</p>
+    </div>
+
+    <!-- 5. THIRD-PARTY PROCESSORS -->
+    <div class="card">
+      <h2>🤝 Third-Party Processors</h2>
+      <p>We share data with the following service providers solely to operate DipCue:</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Provider</th><th>Purpose</th><th>Location</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a></td>
+              <td>Database, authentication, and file storage</td>
+              <td>United States</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic</a></td>
+              <td>AI analysis of strip photos</td>
+              <td>United States</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td>
+              <td>In-app purchase management and verification</td>
+              <td>United States</td>
+            </tr>
+            <tr>
+              <td>Apple</td>
+              <td>App distribution, push notification delivery</td>
+              <td>United States</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Each provider is bound by a data processing agreement and may only process your data as directed by us.</p>
+      <p><strong style="color:var(--text)">International transfers:</strong> All processors are based in the United States. For users in the EEA or UK, transfers to the US are made under Standard Contractual Clauses (SCCs) approved by the European Commission, or equivalent safeguards.</p>
+    </div>
+
+    <!-- 6. DATA RETENTION -->
+    <div class="card">
+      <h2>🗄️ Data Retention</h2>
+      <p>We retain your data for as long as your account is active. When you delete your account — either through the app's <strong style="color:var(--text)">Profile → Delete Account</strong> button or by contacting us — all your data (profile, readings, push token, and audit logs) is permanently and immediately deleted from our systems.</p>
+      <p>We do not retain any data after account deletion.</p>
+    </div>
+
+    <!-- 7. YOUR RIGHTS -->
+    <div class="card">
+      <h2>🛡️ Your Rights</h2>
+      <p>Depending on where you live, you have the following rights regarding your personal data:</p>
+
+      <div class="rights-group">
+        <span class="rights-label">All users</span>
+        <ul>
+          <li><strong style="color:var(--text)">Access</strong> — Request a copy of the personal data we hold about you</li>
+          <li><strong style="color:var(--text)">Correction</strong> — Update inaccurate data (most can be updated directly in the app)</li>
+          <li><strong style="color:var(--text)">Deletion</strong> — Delete your account and all data instantly via Profile → Delete Account, or by emailing <a href="mailto:support@tjnai.ai">support@tjnai.ai</a></li>
+          <li><strong style="color:var(--text)">Portability</strong> — Request your data in a machine-readable format (CSV or JSON)</li>
+        </ul>
+      </div>
+
+      <div class="rights-group">
+        <span class="rights-label">EEA and UK users (GDPR)</span>
+        <ul>
+          <li><strong style="color:var(--text)">Restriction</strong> — Ask us to pause processing of your data without deleting it</li>
+          <li><strong style="color:var(--text)">Object</strong> — Object to processing based on legitimate interest</li>
+          <li><strong style="color:var(--text)">Withdraw consent</strong> — Disable push notifications at any time in iOS Settings or in the app</li>
+          <li><strong style="color:var(--text)">Lodge a complaint</strong> — Contact your local Data Protection Authority. In the EU: <a href="https://edpb.europa.eu" target="_blank" rel="noopener">edpb.europa.eu</a>. In the UK: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</li>
+        </ul>
+      </div>
+
+      <div class="rights-group">
+        <span class="rights-label">California users (CCPA)</span>
+        <ul>
+          <li>You have the right to know what personal information we collect, to request deletion, and to opt out of the sale of personal information. We do not sell personal information.</li>
+        </ul>
+      </div>
+
+      <p>To exercise any of these rights, email us at <a href="mailto:support@tjnai.ai" class="highlight">support@tjnai.ai</a>. We will respond within 30 days.</p>
+    </div>
+
+    <!-- 8. CHILDREN -->
+    <div class="card">
+      <h2>👶 Children</h2>
+      <p>DipCue is not directed at children under 13. We do not knowingly collect personal data from children under 13. If you believe a child under 13 has provided us with data, please contact us at <a href="mailto:support@tjnai.ai">support@tjnai.ai</a> and we will delete it promptly.</p>
+    </div>
+
+    <!-- 9. SECURITY -->
+    <div class="card">
+      <h2>🔐 Security</h2>
+      <p>We protect your data with:</p>
+      <ul class="security-list">
+        <li>Encryption in transit (TLS) and at rest</li>
+        <li>Row-level security on our database — your data is only accessible by you</li>
+        <li>Secure token storage on your device (iOS Keychain)</li>
+        <li>Automatic deletion of strip photos immediately after analysis</li>
       </ul>
     </div>
 
+    <!-- 10. CHANGES -->
     <div class="card">
-      <h2>🎯 How We Use It</h2>
-      <p>Your pool data is used exclusively to provide the app's features — calculating chemical recommendations and storing your reading history.</p>
-      <p>We do not use your data for advertising, analytics, or any purpose beyond operating the app.</p>
+      <h2>🔔 Changes to This Policy</h2>
+      <p>We may update this policy from time to time. We will notify you of material changes by updating the "Last updated" date above. Continued use of DipCue after changes constitutes acceptance of the updated policy.</p>
     </div>
 
-    <div class="card">
-      <h2>📷 Camera</h2>
-      <p>DipCue requests camera access solely to photograph your test strip. Strip images are sent to our AI analysis service and deleted immediately after analysis completes. Images are never stored long-term.</p>
-    </div>
-
-    <div class="card">
-      <h2>🗄️ Data Storage</h2>
-      <p>Your data is stored securely by <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, a US-based cloud infrastructure provider. All data is encrypted in transit and at rest.</p>
-    </div>
-
-    <div class="card">
-      <h2>🤝 Data Sharing</h2>
-      <p>We do not sell, rent, or share your personal data with third parties. Your pool chemistry data is private to your account.</p>
-    </div>
-
-    <div class="card">
-      <h2>💳 In-App Purchases</h2>
-      <p>DipCue offers a one-time lifetime purchase processed through Apple's App Store. Purchase history is managed by Apple and <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>. We do not store payment information. RevenueCat may collect anonymized purchase and device identifiers to verify entitlements.</p>
-    </div>
-
-    <div class="card">
-      <h2>🔔 Push Notifications</h2>
-      <p>If you enable notifications, DipCue uses your device's push notification token to send optional weekly pool-check reminders. You can disable notifications at any time in your device Settings.</p>
-    </div>
-
-    <div class="card">
-      <h2>🗑️ Data Deletion</h2>
-      <p>You can delete your account and all associated data at any time by contacting us at <a href="mailto:support@tjnai.com" class="highlight">support@tjnai.com</a>. We will process deletion requests within 30 days.</p>
-    </div>
-
-    <div class="card">
-      <h2>👶 Children</h2>
-      <p>DipCue is not directed at children under 13 and we do not knowingly collect data from children.</p>
-    </div>
-
-    <div class="card">
-      <h2>🔔 Changes</h2>
-      <p>If we make material changes to this policy, we will notify you within the app. Continued use after notification constitutes acceptance of the updated policy.</p>
-    </div>
-
+    <!-- 11. CONTACT -->
     <div class="card">
       <h2>✉️ Contact</h2>
-      <p>Questions? Contact us at <a href="mailto:support@tjnai.com">support@tjnai.com</a>.</p>
+      <p>Questions? Reach us at:</p>
       <p>
-        <strong>TJNAI LLC</strong><br>
+        <strong>TJNAI.ai LLC</strong><br>
+        Email: <a href="mailto:support@tjnai.ai" class="highlight">support@tjnai.ai</a><br>
         Website: <a href="https://tjnai.ai">tjnai.ai</a>
       </p>
     </div>
@@ -247,10 +382,10 @@
 
   <footer>
     <div class="ft">
-      <a href="index.html" class="ft-logo"><span>TJNAI LLC</span></a>
-      <p class="ft-copy">&copy; 2026 TJNAI LLC. All rights reserved.</p>
+      <a href="index.html" class="ft-logo"><span>TJNAI.ai LLC</span></a>
+      <p class="ft-copy">&copy; 2026 TJNAI.ai LLC. All rights reserved.</p>
       <div class="ft-links">
-        <a href="mailto:support@tjnai.com">support@tjnai.com</a>
+        <a href="mailto:support@tjnai.ai">support@tjnai.ai</a>
         <a href="privacy.html">Site Privacy</a>
       </div>
     </div>
