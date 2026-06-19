@@ -2,11 +2,11 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["X2JL72P5XT.com.tjnai.aquaiq"],
+        "appIDs": ["X2JL72P5XT.com.tjnai.tovael"],
         "components": [
           {
             "/": "/auth/confirm*",
-            "comment": "DipCue email confirmation"
+            "comment": "Tovael email confirmation"
           }
         ]
       }
